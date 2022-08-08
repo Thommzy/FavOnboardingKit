@@ -9,6 +9,7 @@ class TransitionView: UIView {
     private var viewTintColor: UIColor?
     private var timer: DispatchSourceTimer?
     private var index: Int = -1
+    private let themeFont: UIFont
     
     var slideIndex: Int {
         return index
@@ -30,7 +31,7 @@ class TransitionView: UIView {
     }()
     
     private lazy var titleView: TitleView = {
-        let titleView = TitleView()
+        let titleView = TitleView(themeFont: themeFont)
         return titleView
     }()
     
@@ -50,9 +51,12 @@ class TransitionView: UIView {
         return stackView
     }()
     
-    init(slides: [Slide], viewTintColor: UIColor?) {
+    init(slides: [Slide],
+         viewTintColor: UIColor?,
+         themeFont: UIFont) {
         self.slides = slides
         self.viewTintColor = viewTintColor
+        self.themeFont = themeFont
         super.init(frame: .zero)
         layout()
     }
