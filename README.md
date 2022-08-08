@@ -2,7 +2,9 @@
 
 FavOnboardingKit provides an onboarding flow that is simple and easy to implement.
 
-![Alt Text](https://raw.githubusercontent.com/Thommzy/FavOnboardingKit/main/video-preview.gif)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Thommzy/FavOnboardingKit/main/video-preview.gif" alt="animated" />
+</p>
 
 ## Contents
 
