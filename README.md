@@ -48,13 +48,6 @@ If you prefer not to use Swift Package Manager, you can integrate FavOnboardingK
 ### Quick Start
 
 ```swift
-//
-//  ViewController.swift
-//  spm-demo
-//
-//  Created by Timothy Obeisun on 7/9/22.
-//
-
 import UIKit
 import FavOnboardingKit
 
@@ -112,6 +105,29 @@ extension ViewController: FavOnboardingKitDelegate {
                           options: .transitionCrossDissolve,
                           animations: nil,
                           completion: nil)
+    }
+}
+
+class MainViewController: UIViewController {
+    let textLabel: UILabel = UILabel()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupViews()
+    }
+}
+
+private extension MainViewController {
+    func setupViews() {
+        view.backgroundColor = .white
+        setupLabel()
+    }
+    
+    func setupLabel() {
+        view.addSubview(textLabel)
+        textLabel.text = "Main ViewController"
+        textLabel.snp.makeConstraints { make in
+            make.center.equalTo(view)
+        }
     }
 }
 
